@@ -1,0 +1,27 @@
+.show-product {
+  position: relative;
+}
+
+.show-product .btn-prd {
+  position: absolute;
+  display: none;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(178, 176, 176);
+  color: black;
+  font-size: 16px;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.show-product:hover .btn-prd {
+  /* background-color: black; */
+  display: block;
+}
+
+.show-product img:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+<ng-container >
+
+  <!-- [formGroup]="productForm" -->
+  <app-new-product (newProductEvent)="addProducts($event)"></app-new-product>
+
+<div class="row gap-3" >
+  <div class="card show-product" style="width: 18rem;" *ngFor="let item of productDetailsBasedOnCategory" >
+    <img [src]="item.photo" [routerLink]="['/product/product-details',item.id]" class="card-img-top" alt="..."  style="height: 10rem">
+    <button class="btn-prd" (click)="addToCart(item)">Add To Card</button>
+    <div class="card-body">
+      <p class="card-text">{{item.name}} </p>
+      <span>${{item.price}}</span><br>
+    <!-- <button class="btn btn-primary"></button> -->
+    </div>
+    <div>
+      <!-- <a href="{{'/show-product/+item.id'}}" class="btn btn-primary">Details</a> -->
+      <button href="" class="btn btn-success" (click)="updateItem(item)">Update</button>
+      <button href="" class="btn btn-danger" (click)="deleteItem(item)">Delete</button>
+    </div>
+  </div>
+
+</div>
+
+</ng-container>
+
+

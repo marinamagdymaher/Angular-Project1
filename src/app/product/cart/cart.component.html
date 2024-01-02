@@ -1,0 +1,18 @@
+<h3>Cart </h3>
+<h2>Product Details</h2>
+
+
+<div class="row gap-3" >
+  <div class="card show-product" style="width: 18rem;" *ngFor="let item of cart" >
+    <img [src]="item.photo" [routerLink]="['/product/product-details',item.id]" class="card-img-top" alt="..."  style="height: 10rem">
+    <div class="card-body">
+      <p class="card-text">{{item.name}} </p>
+      <span>${{item.price}}</span><br>
+    <button class="btn btn-primary">Buy</button>
+    </div>
+  </div>
+
+<!-- <div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div> -->

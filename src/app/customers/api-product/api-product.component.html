@@ -1,0 +1,18 @@
+<div class="row gap-3" >
+  <div class="card show-product" style="width: 18rem;" *ngFor="let item of prdList" >
+    <img [src]="item.image" class="card-img-top" alt="..."  style="height: 10rem">
+    <button class="btn-prd" (click)="addToCart(item)">Add To Card</button>
+    <div class="card-body">
+      <!-- <p class="card-text">{{item.title}} </p> -->
+      <!-- <span>{{item.id}}</span><br> -->
+      <span>${{item.price}}</span><br>
+    <!-- <button class="btn btn-primary"></button> -->
+    </div>
+    <div>
+      <!-- <a href="{{'/show-product/+item.id'}}" class="btn btn-primary">Details</a> -->
+      <button href="" class="btn btn-success" [routerLink]="['update',item.id]" >Update</button>
+      <button href="" class="btn btn-danger" >Delete</button>
+    </div>
+  </div>
+</div>
+

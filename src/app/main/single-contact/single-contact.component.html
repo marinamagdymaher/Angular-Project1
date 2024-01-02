@@ -1,0 +1,30 @@
+<ng-container *ngIf='profileForm'>
+<form [formGroup]="profileForm" (ngSubmit)="addNewContact()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPhone1" class="form-label">Phone</label>
+    <input type="number" class="form-control"formControlName="phone" id="exampleInputPhone1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <p>Form Status: {{ profileForm.status }}</p>
+</form>
+</ng-container>
+
+<div class="container">
+<div class="row">
+  <div class="card-container col-4" *ngFor="let item of customersData">
+    <div class="card" style="width: 18rem">
+      <div class="card-body ">
+        <h5 class="card-title">{{item.name}}</h5>
+        <h6 class="card-price">{{item.phone}}</h6>
+        <a href="" class="btn btn-success">Update</a>
+        <a href="" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

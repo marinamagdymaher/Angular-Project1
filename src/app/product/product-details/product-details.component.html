@@ -1,0 +1,9 @@
+
+<div class="container" >
+  <div class="card row" style="width: 25rem" *ngFor="let item of selectedPrd">
+    <img  class="card-img-top" [src]="item.photo"  alt="Card image cap" style="height: 25rem"/>
+  <div class="card-body row">
+    <p class="card-text">${{item.price}}</p>
+  </div>
+  </div>
+</div>

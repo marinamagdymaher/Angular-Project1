@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-white" href="#">E-Commerce</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item text-white">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item text-white">
+          <a class="nav-link" routerLink="/product">Product</a>
+        </li>
+        <li class="nav-item text-white">
+          <a class="nav-link" routerLink="/customers">Customer</a>
+        </li>
+        <li class="nav-item text-white">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item text-white">
+          <a routerLink="/product/cart" class="button fancy-button">
+            <em class="material-icons">shopping_cart</em>Cart
+          </a>
+        </li>
+
+
+          <!-- <button class="bg-dark text-white border-0" (click)="darkMode.set(!darkMode())">
+            <span *ngIf="!darkMode()" class="material-icons"> dark_mode </span>
+            <span *ngIf="darkMode()" class="material-icons"> light_mode </span>
+          </button> -->
+      </ul>
+      <mat-slide-toggle></mat-slide-toggle>
+      <div>
+        <!-- <button><mat-icon>favorite</mat-icon></button> -->
+        <button class="bg-dark text-white border-0" (click)="darkMode.set(!darkMode())" >
+          <span *ngIf="!darkMode()" class="material-icons"> dark_mode </span>
+          <span *ngIf="darkMode()" class="material-icons"> light_mode </span>
+        </button>
+      </div>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

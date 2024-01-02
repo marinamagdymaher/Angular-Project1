@@ -1,0 +1,18 @@
+<h1  class="d-flex justify-content-center">Shop By Category</h1>
+<div class="d-flex justify-content-around" >
+  <!-- [field]="item.id" -->
+  <div class="card" *ngFor="let item of categoryDetails; index as i"  style="width: 25rem">
+    <img  [routerLink]="['/product/show-product',item.id]" class="card-img-top" [src]="item.photo" alt="Card image cap" style="height: 25rem"/>
+    <div class="card-body">
+      <h4 class="card-title" >{{ item.name }}</h4>
+      <!-- <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p> -->
+      <a (click)="getCategoryProduct(i)" class="btn btn-link" >Shop Now</a>
+      <a  class="btn btn-link" href="{{'/product/show-product/+item.id'}}">Router </a>
+      <!-- (click)="getProductByCategory(i)" -->
+    </div>
+  </div>
+</div>
+
